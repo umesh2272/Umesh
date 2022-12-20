@@ -1,0 +1,15 @@
+<div style="text-align:center; background-color:#f1f1f1;padding:20px;">
+  <h1>
+    {{title}}
+  </h1>
+  <h2 class="txtcolor" [ngclass]="currentClasses">Hello</h2>
+  <h2 [ngStyle]="currentStyles">Welcome</h2>
+
+  <p>
+    <button (click)="setcurrentClasses()">Set Claasses</button>
+    <button (click)="setcurrentStyles()">Set Style</button>
+  </p>
+
+</div>
+
+<router-outlet></router-outlet>
