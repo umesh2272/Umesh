@@ -1,15 +1,9 @@
-<div style="text-align:center; background-color:#f1f1f1;padding:20px;">
-  <h1>
-    {{title}}
-  </h1>
-  <h2 class="txtcolor" [ngclass]="currentClasses">Hello</h2>
-  <h2 [ngStyle]="currentStyles">Welcome</h2>
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+</select>
 
-  <p>
-    <button (click)="setcurrentClasses()">Set Claasses</button>
-    <button (click)="setcurrentStyles()">Set Style</button>
-  </p>
-
+<div class="row" [ngSwitch]="selectedvalue">
+ <div *ngSwitchCase="One">One is Pressed</div>
+ <div *ngSwitchCase="Two">Two Is Selected</div>
+ <div*ngSwitchDefault>Default Option</div>
 </div>
-
-<router-outlet></router-outlet>

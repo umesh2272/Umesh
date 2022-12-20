@@ -6,26 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngclassstyleapp';
+  title = 'ngswitch';
+}
 
-  bgColor = true;
-  txtColor = true;
+class item {
+  name:string;
+  val:number;
 
-  //currentClasses: {};
-   currentClasses!: {};
-   currentStyles!: {};
-
-  setCurrentClasses() {
-    this.currentClasses = {
-      'bgcolor': this.bgColor,
-      'txtcolor': !this.txtColor
-    };
-  }
-
-  setCurrentStyle() {
-    this.currentStyles = {
-      'background-color': this.bgColor ? 'blue' : 'transparent',
-      'color': !this.txtColor ? 'black' : 'white'
-    };
-  }
+}
+export class AppComponent
+{
+  item:item[] = [{name:'one',val:1},{name:'Two',val:2},{name:'Three',val:3}];
+  selectedValue:string='one';
 }
